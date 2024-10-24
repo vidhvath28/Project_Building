@@ -1,4 +1,3 @@
-// Abstract class
 abstract class Shape {
     private String shapeType;
 
@@ -6,26 +5,23 @@ abstract class Shape {
         this.shapeType = shapeType;
     }
 
-    // Abstract method
+    // (Abstraction)
     public abstract double calculateArea();
-
-    // Concrete method
     public void displayShapeType() {
         System.out.println("Shape Type: " + shapeType);
     }
 
-    // Getter for shapeType
+    //  (Encapsulation)
     public String getShapeType() {
         return shapeType;
     }
 }
 
-// Subclass Circle
+//  (Inheritance)
 class Circle extends Shape {
     private double radius;
-
     public Circle(double radius) {
-        super("Circle");
+        super("Circle"); 
         this.radius = radius;
     }
 
@@ -34,19 +30,17 @@ class Circle extends Shape {
         return Math.PI * radius * radius;
     }
 
-    // Getter for radius
     public double getRadius() {
         return radius;
     }
 }
-
-// Subclass Rectangle
 class Rectangle extends Shape {
+    // Encapsulated fields (private)
     private double width;
     private double height;
 
     public Rectangle(double width, double height) {
-        super("Rectangle");
+        super("Rectangle");  
         this.width = width;
         this.height = height;
     }
@@ -56,7 +50,6 @@ class Rectangle extends Shape {
         return width * height;
     }
 
-    // Getters for width and height
     public double getWidth() {
         return width;
     }
@@ -66,9 +59,9 @@ class Rectangle extends Shape {
     }
 }
 
-// Main class to run the project
 public class Main {
     public static void main(String[] args) {
+        // (Polymorphism through Shape reference)
         Shape circle = new Circle(5);
         Shape rectangle = new Rectangle(4, 6);
 
