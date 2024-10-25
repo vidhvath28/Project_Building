@@ -14,8 +14,14 @@ abstract class Shape {
     //  (Encapsulation)
     public String getShapeType() {
         return shapeType;
+
+    }
+
+    public void setShapeTypr(String abc){
+        this.shapeType = abc;
     }
 }
+
 
 //  (Inheritance)
 class Circle extends Shape {
@@ -63,6 +69,7 @@ public class Main {
     public static void main(String[] args) {
         // (Polymorphism through Shape reference)
         Shape circle = new Circle(5);
+        
         Shape rectangle = new Rectangle(4, 6);
 
         circle.displayShapeType();
